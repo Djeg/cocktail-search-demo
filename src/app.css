@@ -1,10 +1,9 @@
 /*
-Voici la feuille de style principal de l'application
+This is the main stylesheet for the cocktail search application
 */
 
 /*
-Ce pseudo-selecteur permet de déclarer de manière globale
-des variables ainsi que le style de base
+root selector allowing to define global styles and variables
 */
 :root {
   --dark: #331B4B;
@@ -30,7 +29,7 @@ html, body {
 }
 
 /*
-Design du splash container
+Splash design
 */
 .splash-container {
   width: 350px;
@@ -58,7 +57,7 @@ Design du splash container
 }
 
 /*
-Barre de recherche
+Search bar design
 */
 .search-bar {
   max-width: 400px;
@@ -102,7 +101,7 @@ Barre de recherche
 }
 
 /*
-Style pour le container des cocktails
+Cocktail container
 */
 .cocktail-container {
   padding: 1rem 0;

@@ -1,18 +1,18 @@
 /**
- * Affiche la barre de recherche
+ * Display the search bar by toggling some css class
  */
 export function displaySearchBar(splash, searchBar) {
-  // Ajouter la classe mini à mon splash !
+  // Add mini class to the splash
   splash.classList.add('mini')
-  // Ajouter la class active au search bar
+  // Add active class to the search bar
   searchBar.classList.add('active')
 
-  // On supprime le click sur le splash !
+  // Delete the event on the splash
   splash.removeEventListener('click', displaySearchBar)
 }
 
 /**
- * Initialize the splash screen
+ * Initialize splash screen events
  */
 export function initSplash(splash, searchBar) {
   splash.addEventListener('click', () => {
