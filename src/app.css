@@ -111,3 +111,30 @@ Cocktail container
   align-items: stretch;
   max-width: 2000px;
 }
+
+/*
+Cocktail thumbnail design
+*/
+.cocktail {
+  display: flex;
+  margin: .6rem;
+  border-radius: 5px;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--darkLight);
+  cursor: pointer;
+}
+.cocktail .img-container {
+  width: 230px;
+  height: 230px;
+  align-self: stretch;
+  overflow: hidden;
+}
+.cocktail .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cocktail .detail {
+  padding: 1rem 2rem;
+}
