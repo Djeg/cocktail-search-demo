@@ -138,3 +138,138 @@ Cocktail thumbnail design
 .cocktail .detail {
   padding: 1rem 2rem;
 }
+
+/*
+Overlay and left panel design
+*/
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: stretch;
+  max-height: 0;
+  overflow: hidden;
+}
+.overlay.active {
+  animation-name: overlayAnimation;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+.overlay.disable {
+  max-height: 100vh;
+  animation-name: closeOverlayAnimation;
+  animation-duration: .25s;
+  animation-delay: .25s;
+  animation-fill-mode: forwards;
+}
+
+.overlay .left-panel {
+  background-color: var(--dark);
+  width: 90%;
+  transform: translateX(-100%);
+  overflow: auto;
+}
+
+.overlay.active .left-panel {
+  animation-name: leftPanelAnimation;
+  animation-duration: .25s;
+  animation-delay: .25s;
+  animation-fill-mode: forwards;
+}
+.overlay.disable .left-panel {
+  transform: translateX(0);
+  animation-name: closeLeftPanelAnimation;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+.left-panel .top-bar {
+  display: flex;
+  align-items: center;
+  padding: .6rem;
+  cursor: pointer;
+}
+.left-panel .top-bar i {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.left-panel .top-bar p {
+  font-weight: bold;
+}
+
+.left-panel .img-container {
+  align-self: stretch;
+  height: 200px;
+  overflow: hidden;
+}
+.left-panel .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.left-panel h2 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.left-panel .section {
+  padding-left: .6rem;
+  font-weight: bold;
+}
+
+.left-panel .instructions {
+  padding: .6rem;
+}
+
+/*
+Overlay and left panel animations
+*/
+@keyframes overlayAnimation {
+  0% {
+    max-height: 0;
+  }
+
+  100% {
+    max-height: 100vh;
+  }
+}
+
+@keyframes closeOverlayAnimation {
+  0% {
+    max-height: 100vh;
+  }
+
+  100% {
+    max-height: 0;
+  }
+}
+
+@keyframes leftPanelAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeLeftPanelAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
